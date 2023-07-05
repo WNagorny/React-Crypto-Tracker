@@ -9,6 +9,7 @@ export const CryptoProvider = ({ children }) => {
 	const [searchData, setSearchData] = useState()
 	const [coinSearch, setCoinSearch] = useState('')
 	
+	
 
 	const getCryptodata = () => {
 		try {
