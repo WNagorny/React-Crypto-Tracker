@@ -17,8 +17,9 @@ const TableComponent = () => {
 							<th className='py-2'>total volume</th>
 							<th className='py-2'>high 24h</th>
 							<th className='py-2'>Low 24h</th>
-							<th className='py-2'>1H</th>
 							<th className='py-2'>market cap change</th>
+							<th className='py-2'>1H</th>
+							<th className='py-2'>24H</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -56,15 +57,34 @@ const TableComponent = () => {
 										<span className='pl-2'>{data.symbol}</span>
 									</td>
 									<td className='py-4'>{data.name}</td>
-									<td className='py-4'>{data.current_price}</td>
+									<td className='py-4'>{
+										new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'USD' }).format(data.current_price)
+									}</td>
 									<td className='py-4'>{data.total_volume}</td>
 									<td className='py-4'>{data.high_24h}</td>
 									<td className='py-4'>{data.low_24h}</td>
 									<td className='py-4'>
-										{Number(data.price_change_percentage_1h_in_currency).toFixed(3)}
+										{data.market_cap_change_percentage_24h}%
 									</td>
-									<td className='py-4'>
-										{data.market_cap_change_percentage_24h}
+									<td
+										className={
+											data.price_change_percentage_1h_in_currency > 0
+												? 'text-green py-4'
+												: 'text-red py-4'
+										}
+									>
+										{Number(
+											data.price_change_percentage_1h_in_currency
+										).toFixed(3)}
+									</td>
+									<td
+										className={
+											data.price_change_percentage_24h > 0
+												? 'text-green py-4'
+												: 'text-red py-4'
+										}
+									>
+										{data.price_change_percentage_24h}
 									</td>
 								</tr>
 							)
