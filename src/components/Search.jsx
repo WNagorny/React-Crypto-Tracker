@@ -28,14 +28,14 @@ const SearchInput = ({ handleSearch }) => {
 
 	return (
 		<>
-			<form className='w-96 relative flex items-center ml-7 font-nunito' onSubmit={handleSubmit}>
+			<form className='w-96 relative flex items-center mr-44 font-nunito' onSubmit={handleSubmit}>
 				<input
 					onChange={handelInput}
 					value={searchText}
 					type='text'
 					name='search'
 					placeholder='search here...'
-					className='w-full rounded bg-gray-200 placeholder:text-gray-100 pl-3 py-1 capitalize required outline-0 border border-transparent focus:border-amber-500'
+					className='w-full rounded bg-gray-200 placeholder:text-gray-100 pl-3 py-0.5 capitalize required outline-0 border border-transparent focus:border-amber-500'
 				/>
 				<button type='submit' className='absolute right-2 cursor-pointer'>
 					<img src={searchIcon} alt='searchIcon' className='w-full h-auto' />

@@ -8,8 +8,8 @@ const Currency = () => {
 
    const currencyRef = useRef(null)
 
-   const handleCurrencySubmit = (e) => {
-      e.preventDefault();
+   const handleCurrencySubmit =(e) => {
+      e.preventDefult();
       let val = currencyRef.current.value
       setCurrency(val)
       currencyRef.current.value = '';
@@ -18,7 +18,7 @@ const Currency = () => {
 
 	return (
 		<div className='flex mr-7'>
-			<form className='relative flex items-center font-nunito mr-12' onSubmit={handleCurrencySubmit}>
+			<form className='relative flex items-center font-nunito ml-52' onSubmit={handleCurrencySubmit}>
 				<label
                   htmlFor='currency'
                   className='relative flex justify-center items-center mr-2 font-bold'
