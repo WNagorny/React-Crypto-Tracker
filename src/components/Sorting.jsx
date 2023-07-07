@@ -16,7 +16,7 @@ const Sorting = () => {
 
   return (
     <label className='relative flex justify-center items-center'>
-      <span className='font-bold mr-2'>sort by:</span>
+      <span className='font-bold mr-2 capitalize'>sort by:</span>
       <select name="sortby" className='rounded bg-gray-200 text-sm pl-2 pr-10 py-0.5 leading-10 capitalize focus:outline-0' onClick={handleSort}>
          <option value="market_cap_desc">market cap desc</option>
          <option value="market_cap_asc">market cap asc</option>
