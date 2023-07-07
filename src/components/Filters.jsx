@@ -2,7 +2,7 @@ import React from 'react'
 import Search from './Search'
 import Currency from './Currency'
 import Sorting from './Sorting'
-
+import Reset from './Reset'
 
 const Filters = () => {
 
@@ -11,6 +11,7 @@ const Filters = () => {
       <Search/>
       <Currency/>
       <Sorting/>
+      <Reset/>
     </div>
   )
 }
