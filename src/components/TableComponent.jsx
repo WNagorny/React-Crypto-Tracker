@@ -2,6 +2,7 @@ import React from 'react'
 import { CryptoContext } from '../context/CryptoContext'
 import { useContext } from 'react'
 import Pagination from './Pagination'
+import {Link} from 'react-router-dom'
 
 const TableComponent = () => {
 	let { cryptoData, currency } = useContext(CryptoContext)
@@ -56,9 +57,11 @@ const TableComponent = () => {
 												alt={data.name}
 												className='w-[1.2rem] h-[1.2rem]'
 											/>
-											<span className='pl-2'>{data.symbol}</span>
+											<span className='pl-2'>
+											<Link to={`/${data.id}`} className='cursor-pointer'>{data.symbol}</Link>
+											</span>
 										</td>
-										<td className='py-4'>{data.name}</td>
+										<td className='py-4'><Link to={`/${data.id}`} className='cursor-pointer'>{data.name}</Link></td>
 										<td className='py-4'>
 											{new Intl.NumberFormat('en-IN', {
 												style: 'currency',
