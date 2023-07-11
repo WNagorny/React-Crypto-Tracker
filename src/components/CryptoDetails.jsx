@@ -1,8 +1,40 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { useParams, useNavigate } from 'react-router-dom'
-import { useLayoutEffect, useContext } from 'react'
+import { useLayoutEffect, useContext,useState,useEffect } from 'react'
 import { CryptoContext } from '../context/CryptoContext'
+
+
+const HighLowIndicator = ({ currentPrice, high, low }) => {
+  const [greenWidth, setGreenWidth] = useState(0);
+  const [redWidth, setRedWidth] = useState(0);
+
+  useEffect(() => {
+    const totalRange = high - low;
+    const currentPriceOffset = high - currentPrice;
+
+    const greenPercentage = (currentPriceOffset / totalRange) * 100;
+    const redPercentage = 100 - greenPercentage;
+
+    setGreenWidth(greenPercentage);
+    setRedWidth(redPercentage);
+  }, [currentPrice, high, low]);
+
+  return (
+    <>
+      <span
+        className='bg-red h-1.5 rounded-l-lg'
+        style={{ width: `${redWidth}%` }}
+      ></span>
+      <span
+        className='bg-green h-1.5 rounded-r-lg'
+        style={{ width: `${greenWidth}%` }}
+      ></span>
+    </>
+  );
+};
+
+
 
 const CryptoDetails = () => {
 	let { coinId } = useParams()
@@ -143,7 +175,11 @@ const CryptoDetails = () => {
 							</div>
 
 							<div className='flex w-full mt-4 justify-between'>
-								indicator
+								<HighLowIndicator
+								currentPrice={coinData.market_data.current_price[currency]}
+								high={coinData.market_data.high_24h[currency]}
+								low={coinData.market_data.low_24h[currency]}
+								/>
 							</div>
 
 							<div className='flex w-full mt-4 justify-between'>
@@ -283,5 +319,7 @@ const CryptoDetails = () => {
 		document.getElementById('model')
 	)
 }
+
+
 
 export default CryptoDetails
