@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useLayoutEffect, useContext,useState,useEffect } from 'react'
 import { CryptoContext } from '../context/CryptoContext'
+import Chart from './Chart'
 
 
 const HighLowIndicator = ({ currentPrice, high, low }) => {
@@ -309,8 +310,10 @@ const CryptoDetails = () => {
 
 						</div>
 
-						<div className='flex flex-col w-[60%] h-full pl-3 bg-green'>
-							Right
+						<div className='flex flex-col w-[60%] h-full pl-3'>
+							<Chart
+								id={coinData.id}
+							/>
 						</div>
 					</div>
 				) : null}
