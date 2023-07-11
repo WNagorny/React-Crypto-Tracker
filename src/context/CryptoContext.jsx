@@ -42,7 +42,7 @@ export const CryptoProvider = ({ children }) => {
 				.then(res => res.json())
 				.then(json => json)
 
-			console.log(data)
+			console.log('CryptoData', data)
 			setCryptoData(data)
 		} catch (error) {
 			console.log(error)
@@ -83,7 +83,7 @@ export const CryptoProvider = ({ children }) => {
 				.then(res => res.json())
 				.then(json => json)
 
-			console.log(data)
+			console.log('CoinData', data)
 			setCoinData(data)
 		} catch (error) {
 			console.log(error)
