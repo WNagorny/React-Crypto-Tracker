@@ -53,11 +53,11 @@ const CryptoDetails = () => {
 
 	return ReactDOM.createPortal(
 		<div
-			className='fixed top-0 w-full h-full bg-gray-200 bg-opacity-30 first-letter: backdrop-blur-sm flex items-center justify-center font-nunito'
+			className='fixed top-0 w-full h-full bg-gray-200 bg-opacity-30 first-letter: backdrop-blur-md flex items-center justify-center font-nunito'
 			onClick={close}
 		>
 			<div
-				className='w-[65%] h-[75%] bg-gray-300 bg-opacity-75 rounded-lg text-white relative'
+				className='w-[65%] h-[60%] bg-gray-300 bg-opacity-75 rounded-lg text-white relative'
 				onClick={e => e.stopPropagation()}
 			>
 				{coinData ? (
@@ -310,7 +310,7 @@ const CryptoDetails = () => {
 
 						</div>
 
-						<div className='flex flex-col w-[60%] h-full pl-3'>
+						<div className='flex flex-col w-[60%] h-full pl-4'>
 							<Chart
 								id={coinData.id}
 							/>
