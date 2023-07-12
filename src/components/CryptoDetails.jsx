@@ -9,6 +9,7 @@ import Chart from './Chart'
 const HighLowIndicator = ({ currentPrice, high, low }) => {
   const [greenWidth, setGreenWidth] = useState(0);
   const [redWidth, setRedWidth] = useState(0);
+  
 
   useEffect(() => {
     const totalRange = high - low;
