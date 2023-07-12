@@ -102,7 +102,7 @@ const Chart = ({ id }) => {
 							? 'bg-amber text-amber'
 							: 'bg-gray-200 text-gray-100'
 					}`}
-					onClick={() => setType('')}
+					onClick={() => setType('prices')}
 				> Price</button>
 
 				<button
