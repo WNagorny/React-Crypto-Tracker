@@ -11,7 +11,7 @@ const Navigation = () => {
 					return `w-full text-base text-center font-nunito m-2.5
                ${
 									isActive
-										? 'bg-amber-500 text-gray-300'
+										? 'bg-amber text-gray-300'
 										: 'bg-gray-200 text-gray-100 hover:text-amber-500 active:bg-amber-500 active:text-gray-300'
 								}
                  border-0 cursor-pointer rounded capitalize font-semibold`
@@ -25,7 +25,7 @@ const Navigation = () => {
 					return `w-full text-base text-center font-nunito m-2.5
                ${
 									isActive
-										? 'bg-amber-500 text-gray-300'
+										? 'bg-amber text-gray-300'
 										: 'bg-gray-200 text-gray-100 hover:text-amber-500 active:bg-amber-500 active:text-gray-300'
 								}
                  border-0 cursor-pointer rounded capitalize font-semibold`
@@ -39,7 +39,7 @@ const Navigation = () => {
 					return `w-full text-base text-center font-nunito m-2.5
                ${
 									isActive
-										? 'bg-amber-500 text-gray-300'
+										? 'bg-amber text-gray-300'
 										: 'bg-gray-200 text-gray-100 hover:text-amber-500 active:bg-amber-500 active:text-gray-300'
 								}
                  border-0 cursor-pointer rounded capitalize font-semibold`
