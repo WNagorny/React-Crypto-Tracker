@@ -54,7 +54,7 @@ const CryptoDetails = () => {
 			onClick={close}
 		>
 			<div
-				className='w-[65%] h-[60%] bg-gray-300 bg-opacity-75 rounded-lg text-white relative'
+				className='w-[65%] h-[68%] bg-gray-300 bg-opacity-75 rounded-lg text-white relative'
 				onClick={e => e.stopPropagation()}
 			>
 				{coinData ? (
@@ -463,7 +463,15 @@ const CryptoDetails = () => {
 							)}
 						</div>
 					</div>
-				) : null}
+				) : (
+					<div className='w-full h-full min-h-[60vh] flex justify-center items-center'>
+						<div
+							className='w-8 h-8 border-4 border-amber rounded-full border-b-gray-200 animate-spin'
+							role='status'
+						/>
+						<span className='ml-4'>Please wait...</span>
+					</div>
+				)}
 			</div>
 		</div>,
 		document.getElementById('model')

@@ -11,11 +11,11 @@ const SaveBtn = ({ data }) => {
 	const handleSaveFunction = e => {
 		e.preventDefault()
 		saveCoin(data.id)
-		
-		if(allCoins.includes(data.id)) {
+
+		if (allCoins.includes(data.id)) {
 			removeCoin(data.id)
-		} else{
-			saveCoin(data.id)
+		} else {
+			saveCoin()
 		}
 	}
 
@@ -31,7 +31,7 @@ const SaveBtn = ({ data }) => {
 				fill='#FFC107'
 				xmlns='http://www.w3.org/2000/svg'
 				className={`w-[1.5rem] ml-1.5 
-					${allCoins.includes(data.id) ? "fill-amber" : "fill-gray-100"}
+					${allCoins.includes(data.id) ? 'fill-amber' : 'fill-gray-100'}
 				`}
 			>
 				<g clipPath='url(#clip0_16_420)'>
@@ -64,8 +64,8 @@ const TableComponent = () => {
 								<th className='py-2'>high 24h</th>
 								<th className='py-2'>Low 24h</th>
 								<th className='py-2'>market cap change</th>
-								<th className='py-2'>1H</th>
-								<th className='py-2'>24H</th>
+								<th className='py-2 lg:table-cell hidden'>1H</th>
+								<th className='py-2 lg:table-cell hidden'>24H</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -108,8 +108,8 @@ const TableComponent = () => {
 										<td
 											className={
 												data.price_change_percentage_1h_in_currency > 0
-													? 'text-green py-4'
-													: 'text-red py-4'
+													? 'text-green py-4 lg:table-cell hidden'
+													: 'text-red py-4 lg:table-cell hidden'
 											}
 										>
 											{Number(
@@ -119,8 +119,8 @@ const TableComponent = () => {
 										<td
 											className={
 												data.price_change_percentage_24h > 0
-													? 'text-green py-4'
-													: 'text-red py-4'
+													? 'text-green py-4 lg:table-cell hidden'
+													: 'text-red py-4 lg:table-cell hidden'
 											}
 										>
 											{data.price_change_percentage_24h}
@@ -130,7 +130,15 @@ const TableComponent = () => {
 							})}
 						</tbody>
 					</table>
-				) : null}
+				) : (
+					<div className='w-full h-full min-h-[60vh] flex justify-center items-center'>
+						<div
+							className='w-8 h-8 border-4 border-amber rounded-full border-b-gray-200 animate-spin'
+							role='status'
+						/>
+						<span className='ml-4'>Please wait...</span>
+					</div>
+				)}
 			</div>
 
 			<div className='flex items-center justify-between mt-4 capitalize h-[2rem]'>
@@ -140,7 +148,7 @@ const TableComponent = () => {
 						href='http://www.coingecko.com'
 						rel='noreferrer'
 						target='_blank'
-						className='text-amber-500'
+						className='text-amber'
 					>
 						CoinGecko
 					</a>

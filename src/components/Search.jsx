@@ -35,7 +35,7 @@ const SearchInput = ({ handleSearch }) => {
 					type='text'
 					name='search'
 					placeholder='search here...'
-					className='w-full rounded bg-gray-200 placeholder:text-gray-100 pl-3 py-0.5 capitalize required outline-0 border border-transparent focus:border-amber-500'
+					className='w-full rounded bg-gray-200 placeholder:text-gray-100 pl-3 py-0.5 capitalize required outline-0 border border-transparent focus:border-amber'
 				/>
 				<button type='submit' className='absolute right-2 cursor-pointer'>
 					<img src={searchIcon} alt='searchIcon' className='w-full h-auto' />
@@ -60,7 +60,7 @@ const SearchInput = ({ handleSearch }) => {
 						})
 					) : (
 						<div className='w-full h-full flex justify-center items-center'>
-							<div className="w-8 h-8 border-4 border-amber-500 rounded-full border-b-gray-200 animate-spin" role="status"/>
+							<div className="w-8 h-8 border-4 border-amber rounded-full border-b-gray-200 animate-spin" role="status"/>
 							<span className='ml-4'>Searching...</span>
 						</div>
 					)}

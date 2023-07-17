@@ -94,3 +94,4 @@ export const StorageProvider = ({ children }) => {
 		</StorageContext.Provider>
 	)
 }
+

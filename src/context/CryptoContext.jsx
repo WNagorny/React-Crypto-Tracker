@@ -74,6 +74,8 @@ export const CryptoProvider = ({ children }) => {
 	}
 
 	const getCoinData = async (coinid) => {
+
+		setCoinData();
 		
 
 		try {
