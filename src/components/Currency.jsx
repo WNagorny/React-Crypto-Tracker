@@ -8,8 +8,8 @@ const Currency = () => {
 
    const currencyRef = useRef(null)
 
-   const handleCurrencySubmit =(e) => {
-      e.preventDefult();
+   const handleCurrencySubmit = (e) => {
+      e.preventDefault();
       let val = currencyRef.current.value
       setCurrency(val)
       currencyRef.current.value = '';
