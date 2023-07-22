@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { Outlet, Link } from 'react-router-dom'
-import Reset from '../components/Reset'
 import { StorageContext } from '../context/StorageContext'
 import { CryptoContext } from '../context/CryptoContext'
 
