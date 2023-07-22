@@ -58,12 +58,12 @@ const TableComponent = () => {
 						<thead className='capitalize text-base text-gray-100 font-medium border-b border-gray-100'>
 							<tr>
 								<th className='py-2'>Asset</th>
-								<th className='py-2'>name</th>
+								<th className='py-2 sm:table-cell hidden'>name</th>
 								<th className='py-2'>price</th>
-								<th className='py-2'>total volume</th>
+								<th className='py-2 md:table-cell hidden'>total volume</th>
 								<th className='py-2'>high 24h</th>
 								<th className='py-2'>Low 24h</th>
-								<th className='py-2'>market cap change</th>
+								<th className='py-2 sm:table-cell hidden'>market cap change</th>
 								<th className='py-2 lg:table-cell hidden'>1H</th>
 								<th className='py-2 lg:table-cell hidden'>24H</th>
 							</tr>
@@ -99,7 +99,7 @@ const TableComponent = () => {
 												currency: currency,
 											}).format(data.current_price)}
 										</td>
-										<td className='py-4'>{data.total_volume}</td>
+										<td className='py-4 md:table-cell hidden'>{data.total_volume}</td>
 										<td className='py-4'>{data.high_24h}</td>
 										<td className='py-4'>{data.low_24h}</td>
 										<td className='py-4'>

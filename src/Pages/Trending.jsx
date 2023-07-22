@@ -10,14 +10,13 @@ const Trending = () => {
 
 
 	return (
-		<section className='w-[80%] h-full flex flex-col mt-16 mb-24 relative'>
-			<div className='w-full min-h-[60vh] py-8 flex flex-wrap justify-evenly border border-gray-100 rounded'>
+		<section className='lg:w-[80%] w-[90%] h-full flex flex-col mt-16 mb-24 relative'>
+			<div className='w-full flex lg:flex-row flex-col items-center flex-wrap justify-evenly  py-8 border border-gray-100 min-h-[60vh] rounded'>
 				
 			{
 				trendData && trendData.map(coin =>
 					<TrendingCoin  data={coin.item}/>   )
 			}
-				<Reset/>
 			</div>
 
 			<Outlet/>
