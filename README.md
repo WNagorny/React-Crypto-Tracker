@@ -50,10 +50,7 @@ The application will run at `http://localhost:3000/`. Open this page in your web
 - Sorting cryptocurrencies based on existing criteria.
 
 ## Screenshots
-- https://imgur.com/jY9Tx70
-- https://imgur.com/eRaPsTl
-- https://imgur.com/ZYnhCth
-- https://imgur.com/LAoVzs2
+- https://imgur.com/gallery/FkrlD9U
 
 ## Authors
  - Walery Nagorny - [@walery_nagorny](https://github.com/WNagorny)
