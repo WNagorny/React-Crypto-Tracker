@@ -95,7 +95,7 @@ const Chart = ({ id }) => {
 		<div className='w-full h-[60%]'>
 			<ChartComponent data={chartData} currency={currency} type={type} />
 
-			<div className='flex'>
+			<div className='flex md:flex-nowrap flex-wrap'>
 				<button
 					className={`text-sm py-0.5 px-1.5 ml-2 bg-opacity-25 rounded capitalize ${
 						type === 'prices'
@@ -130,7 +130,7 @@ const Chart = ({ id }) => {
 						days === 7
 							? 'bg-amber text-amber'
 							: 'bg-gray-200 text-gray-100'
-					}`}
+					} md:mt-0 mt-2`}
 					onClick={() => setDays(7)}
 				>
 					7d
@@ -141,7 +141,7 @@ const Chart = ({ id }) => {
 						days === 14
 							? 'bg-amber text-amber'
 							: 'bg-gray-200 text-gray-100'
-					}`}
+					} md:mt-0 mt-2`}
 					onClick={() => setDays(14)}
 				>
 					14d
@@ -152,7 +152,7 @@ const Chart = ({ id }) => {
 						days === 30
 							? 'bg-amber text-amber'
 							: 'bg-gray-200 text-gray-100'
-					}`}
+					} md:mt-0 mt-2`}
 					onClick={() => setDays(30)}
 				>
 					30d
