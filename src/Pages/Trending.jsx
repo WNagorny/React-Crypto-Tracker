@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { TrendingContext } from '../context/TrendingContext'
 import TrendingCoin from '../components/TrendingCoin'
 import {Outlet} from 'react-router-dom'
-import Reset from '../components/Reset'
 
 const Trending = () => {
 
@@ -15,7 +14,7 @@ const Trending = () => {
 				
 			{
 				trendData && trendData.map(coin =>
-					<TrendingCoin  data={coin.item}/>   )
+					<TrendingCoin  data={coin.item}  key={coin.item.coin_id}/>   )
 			}
 			</div>
 
@@ -26,3 +25,4 @@ const Trending = () => {
 }
 
 export default Trending
+
