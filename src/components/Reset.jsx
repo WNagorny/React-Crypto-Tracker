@@ -6,7 +6,7 @@ const Reset = () => {
 
 	return (
 		<button
-			className='w-[2rem] mx-6 hover:scale-110 transition-all transition-ease'
+			className='w-[2rem] mx-6 hover:scale-110 transition-all transition-ease absolute right-0 top-0 sm:relative'
 			onClick={resetFunction}
 		>
 			<svg
