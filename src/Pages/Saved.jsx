@@ -53,18 +53,18 @@ const Saved = () => {
 
 	return (
 		<section className='xs:w-[80%] w-[90%] h-full flex flex-col mt-16 mb-24 relative'>
-			<div className='w-full min-h-[60vh] py-8  border border-gray-100 rounded'>
+			<div className='flex flex-col border border-gray-100 rounded min-h-[60vh]'>
 				{savedData ?
 					<table className='w-full table-auto'>
 						<thead className='capitalize text-base text-gray-100 font-medium border-b border-gray-100'>
 							<tr>
-								<th className='py-2'>Asset</th>
+							<th className='py-2'>Asset</th>
 								<th className='py-2 sm:table-cell hidden'>name</th>
 								<th className='py-2'>price</th>
 								<th className='py-2 md:table-cell hidden'>total volume</th>
-								<th className='py-2'>high 24h</th>
-								<th className='py-2'>Low 24h</th>
-								<th className='py-2 md:table-cell hidden'>market cap change</th>
+								<th className='py-2 md:table-cell hidden'>high 24h</th>
+								<th className='py-2 md:table-cell hidden'>Low 24h</th>
+								<th className='py-2 sm:table-cell hidden'>market cap change</th>
 								<th className='py-2 lg:table-cell hidden'>1H</th>
 								<th className='py-2 lg:table-cell hidden'>24H</th>
 							</tr>
@@ -84,7 +84,7 @@ const Saved = () => {
 												className='w-[1.2rem] h-[1.2rem] mx-1.5'
 											/>
 											<span className='pl-2'>
-												<Link to={`/${data.id}`} className='cursor-pointer'>
+												<Link to={`/${data.id}`} className='cursor-pointer pr-2'>
 													{data.symbol}
 												</Link>
 											</span>
@@ -94,16 +94,16 @@ const Saved = () => {
 												{data.name}
 											</Link>
 										</td>
-										<td className='py-4'>
+										<td className='py-4 pl-2'>
 											{new Intl.NumberFormat('en-IN', {
 												style: 'currency',
 												currency: currency,
 											}).format(data.current_price)}
 										</td>
 										<td className='py-4 md:table-cell hidden'>{data.total_volume}</td>
-										<td className='py-4'>{data.high_24h}</td>
-										<td className='py-4'>{data.low_24h}</td>
-										<td className='py-4 md:table-cell hidden'>
+										<td className='py-4 md:table-cell hidden'>{data.high_24h}</td>
+										<td className='py-4 md:table-cell hidden'>{data.low_24h}</td>
+										<td className='py-4 sm:table-cell hidden'>
 											{data.market_cap_change_percentage_24h}%
 										</td>
 										<td

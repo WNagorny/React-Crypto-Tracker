@@ -61,8 +61,8 @@ const TableComponent = () => {
 								<th className='py-2 sm:table-cell hidden'>name</th>
 								<th className='py-2'>price</th>
 								<th className='py-2 md:table-cell hidden'>total volume</th>
-								<th className='py-2'>high 24h</th>
-								<th className='py-2'>Low 24h</th>
+								<th className='py-2 md:table-cell hidden'>high 24h</th>
+								<th className='py-2 md:table-cell hidden'>Low 24h</th>
 								<th className='py-2 sm:table-cell hidden'>market cap change</th>
 								<th className='py-2 lg:table-cell hidden'>1H</th>
 								<th className='py-2 lg:table-cell hidden'>24H</th>
@@ -80,7 +80,7 @@ const TableComponent = () => {
 											<img
 												src={data.image}
 												alt={data.name}
-												className='w-[1.2rem] h-[1.2rem]'
+												className='w-[1.2rem] h-[1.2rem] mx-1.5'
 											/>
 											<span className='pl-2'>
 												<Link to={`/${data.id}`} className='cursor-pointer'>
@@ -88,7 +88,7 @@ const TableComponent = () => {
 												</Link>
 											</span>
 										</td>
-										<td className='py-4'>
+										<td className='py-4 cursor-pointer sm:table-cell hidden'>
 											<Link to={`/${data.id}`} className='cursor-pointer'>
 												{data.name}
 											</Link>
@@ -100,9 +100,9 @@ const TableComponent = () => {
 											}).format(data.current_price)}
 										</td>
 										<td className='py-4 md:table-cell hidden'>{data.total_volume}</td>
-										<td className='py-4'>{data.high_24h}</td>
-										<td className='py-4'>{data.low_24h}</td>
-										<td className='py-4'>
+										<td className='py-4 md:table-cell hidden'>{data.high_24h}</td>
+										<td className='py-4 md:table-cell hidden'>{data.low_24h}</td>
+										<td className='py-4 sm:table-cell hidden'>
 											{data.market_cap_change_percentage_24h}%
 										</td>
 										<td

@@ -28,7 +28,7 @@ const Sorting = () => {
          <option className='sm:text-base text-sm' value="gecko_desc">gecko desc</option>
          <option className='sm:text-base text-sm' value="gecko_asc">gecko asc</option>
       </select>
-      <img src={selectIcon} alt="submit" className='w-[1rem] h-auto absolute right-0.5 top-1  pointer-events-none bg-red'/>
+      <img src={selectIcon} alt="submit" className='w-[1rem] h-auto absolute right-0.5 top-1  pointer-events-none'/>
 
     </label>
   )
